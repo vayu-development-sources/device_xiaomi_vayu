@@ -23,9 +23,6 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # Device can have background blurs
 TARGET_USES_BLUR := true
 
-# Device can use Quick Tap feature
-TARGET_SUPPORTS_QUICK_TAP := true
-
 # Shipping level
 PRODUCT_SHIPPING_API_LEVEL := 30
 BOARD_SHIPPING_API_LEVEL := 30
