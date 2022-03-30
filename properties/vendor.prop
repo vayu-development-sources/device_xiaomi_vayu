@@ -163,6 +163,9 @@ ro.vendor.audio.soundtrigger.xatx.vop.level.high=10
 ro.vendor.audio.soundtrigger.xatx.vop.level.low=10
 ro.vendor.audio.soundtrigger.xatx.vop.level.medium=10
 
+# Media
+vendor.media.omx=0
+
 # PASR
 vendor.power.pasr.enabled=false
 
