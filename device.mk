@@ -442,6 +442,10 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-service \
     libsensorndkbridge
 
+# Shim
+PRODUCT_PACKAGES += \
+    libwatermark_shim
+
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
     RemovePackagesVayu
