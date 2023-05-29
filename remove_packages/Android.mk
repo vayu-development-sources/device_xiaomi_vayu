@@ -9,6 +9,7 @@ LOCAL_OVERRIDES_PACKAGES := \
     Drive \
     FilesPrebuilt  \
     Maps \
+    Symphonica \
     YouTube
 
 LOCAL_UNINSTALLABLE_MODULE := true
