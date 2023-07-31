@@ -9,6 +9,8 @@ LOCAL_OVERRIDES_PACKAGES := \
     Drive \
     FilesPrebuilt  \
     Maps \
+    RecorderPrebuilt \
+    SafetyHubPrebuilt \
     Symphonica \
     YouTube
 
