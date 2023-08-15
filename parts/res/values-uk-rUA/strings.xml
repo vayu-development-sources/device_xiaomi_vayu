@@ -12,8 +12,35 @@
      limitations under the License.
 -->
 <resources>
+    <!-- App Name -->
+
+    <string name="enabled">Увімкнути</string>
+    <string name="disabled">Вимкнути</string>
+
+    <string name="on">Увімк</string>
+    <string name="off">Вимк</string>
+
+     <!-- Ambient settings -->
+    <string name="ambient_enable">Використовувати індикацію подій</string>
+    <string name="ambient_display_ia_summary">Підніміть, щоб розбудити, кишеньковий жест та інше</string>
+    <string name="pick_up_title">Режим підняття</string>
+    <string name="pick_up_gyro_title">Використовувати гіроскоп для режиму підняття</string>
+    <string name="pick_up_gyro_summary">Поліпшена точність, збільшує енергоспоживання</string>
+
+     <!-- Touch control Settings -->
+    <string name="touch_control_title">Налаштування сенсора</string>
+    <string name="touch_control_summary">Налаштування функцій сенсорного екрана для кожної програми</string>
+    <string name="touch_game_mode_title">Увімкнути</string>
+    <string name="touch_response_title">Чуйність</string>
+    <string name="touch_response_summary">Керує відгуком</string>
+    <string name="touch_sensitivity_title">Чутливість</string>
+    <string name="touch_sensitivity_summary">Контролює чутливість для повторних торкань</string>
+    <string name="touch_resistant_title">Безпечна зона</string>
+    <string name="touch_resistant_summary">Знижує чутливість по краях для запобігання випадковим натисканням</string>
     <!-- Dirac settings -->
+    <string name="dirac_enable">Увімкнути Dirac</string>
     <string name="dirac_title">Поліпшення звуку Dirac</string>
+    <string name="dirac_summary">Оптимізація якості звуку за допомогою Dirac, Hi-Fi</string>
     <string name="dirac_headset_title">Тип гарнітури</string>
     <string name="dirac_hifi_enable_title"> Увімкнути Hi-fi</string>
     <string name="dirac_preset_title">Налаштування звуку</string>
@@ -66,4 +93,27 @@
     <!-- Raise to wake strings-->
     <string name="raise_to_wake_gesture_title">Підніміть, щоб розбудити</string>
     <string name="raise_to_wake_gesture_summary">Розбудити пристрій замість пульсуючого </string>
+
+    <!-- Haptic Level Settings -->
+     <string name="haptic_title">Тактильний відгук</string>
+     <string name="haptic_warning">Встановлення надто високого рівня тактильного відгуку може призвести до незворотного пошкодження обладнання, використовуйте на свій страх і ризик</string>
+     <string name="haptic_summary">Налаштування інтенсивності тактильного відліку</string>
+     <string name="haptic_level_title">Рівень</string>
+     <string name="haptic_level_summary">Значення інтенсивності тактильного відгуку</string>
+     <string name="haptic_level_summary_incompatible">Ядро не підтримує цю функцію</string>
+
+    <!-- Refresh Rate tile -->
+    <string name="refresh_rate_tile_title">Частота оновлення</string>
+
+    <!-- LCD Features -->
+    <string name="lcd_features_title">Додаткові можливості дисплея</string>
+    <string name="lcd_features_summary">Режим високої яскравості (HBM), Адаптивне керування підсвічуванням вмісту (CABC)</string>
+    <string name="lcd_hbm_title">Режим високої яскравості (HBM)</string>
+    <string name="lcd_hbm_summary">Збільшити яскравість екрана під сонячним світлом</string>
+    <string name="lcd_cabc_title">Адаптивне керування підсвічуванням вмісту (CABS)</string>
+    <string name="lcd_hbm_tile_title">HBM</string>
+    <string name="lcd_cabc_tile_title">CABC</string>
+    <string name="lcd_features_info">Режим високої яскравості (HBM) збільшує максимальну кількість яскравості дисплею для покращення видимості під сонцем. Збільшує енергоспоживання.\n\nАдаптивне керування підсвічуванням вмісту (CABC) налаштовує дисплей та яскравість підсвічування на основі поточного зображеного вмісту, для зменшення енергії без деградації.</string>
+    <string name="kernel_not_supported">Ядро не підтримує цю функцію</string>
+
 </resources>
