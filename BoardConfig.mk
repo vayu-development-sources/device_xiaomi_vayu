@@ -97,6 +97,9 @@ ifeq ($(TARGET_PREBUILT_KERNEL),)
   TARGET_KERNEL_CLANG_VERSION := r487747c
 endif
 
+# Lineage Health
+TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
+
 # MiuiCamera
 -include vendor/xiaomi/miuicamera/BoardConfig.mk
 
