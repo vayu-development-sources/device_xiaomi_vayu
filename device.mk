@@ -404,9 +404,9 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-   ApertureOverlay \
    CarrierConfigOverlayVayu \
    DialerOverlayVayu \
+   FlashOverlay \
    FrameworksResOverlayVayu \
    NotchBarKillerVayu \
    SettingsOverlayVayu \
