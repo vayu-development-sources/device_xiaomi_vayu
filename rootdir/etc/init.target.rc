@@ -55,7 +55,6 @@ on init && property:ro.boot.hwc=GLOBAL
 
 on property:ro.boot.product.hardware.sku=vayu
     enable vendor.nfc_hal_service
-    enable secureelement-hal_1_2
 
 on early-fs
     start vold
@@ -262,11 +261,4 @@ service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service
     user nfc
     group nfc
     task_profiles ServiceCapacityLow
-    disabled
-
-service secureelement-hal_1_2 /vendor/bin/hw/vendor.qti.secure_element@1.2-service
-    override
-    class hal
-    user system
-    group system
     disabled
