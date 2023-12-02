@@ -8,6 +8,7 @@ LOCAL_OVERRIDES_PACKAGES := \
     Chrome-Stub \
     Drive \
     FilesPrebuilt  \
+    Gramophone \
     Maps \
     RecorderPrebuilt \
     SafetyHubPrebuilt \
