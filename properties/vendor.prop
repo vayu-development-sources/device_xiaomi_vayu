@@ -108,6 +108,7 @@ debug.sf.auto_latch_unsignaled=true
 debug.sf.disable_client_composition_cache=1
 debug.sf.predict_hwc_composition_strategy=0
 debug.sf.treat_170m_as_sRGB=1
+graphics.gpu.profiler.support=true
 persist.sys.sf.native_mode=0
 renderthread.skia.reduceopstasksplitting=true
 ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.msmnile.api30
