@@ -27,4 +27,7 @@
     <!--DerpFest Maintainer-->
     <string name="maintainer_name">Bagaskara (Bagaskara815)</string>
     <string name="maintainer_telegram">https://t.me/Bagaskara815</string>
+
+    <!-- Whether to show Smooth Display feature in Settings Options -->
+    <bool name="config_show_smooth_display">true</bool>
 </resources>
