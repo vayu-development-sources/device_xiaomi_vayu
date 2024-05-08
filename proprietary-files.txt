@@ -337,6 +337,12 @@ vendor/etc/camera/visidon_clearshot_params_algoup.xml
 # Camera firmware
 vendor/firmware/CAMERA_ICP.elf
 
+# Camera
+lib64/libcamera_algoup_jni.xiaomi.so
+lib64/libcamera_mianode_jni.xiaomi.so
+lib64/libmicampostproc_client.so
+lib64/vendor.xiaomi.hardware.campostproc@1.0.so
+
 # CDSP
 vendor/bin/cdsprpcd
 vendor/etc/init/vendor.qti.cdsprpc-service.rc
