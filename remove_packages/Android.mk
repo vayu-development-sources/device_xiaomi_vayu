@@ -10,6 +10,7 @@ LOCAL_OVERRIDES_PACKAGES := \
     Drive \
     FilesPrebuilt  \
     Gramophone \
+    Maestro \
     Maps \
     RecorderPrebuilt \
     SafetyHubPrebuilt \
