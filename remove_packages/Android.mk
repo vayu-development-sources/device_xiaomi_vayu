@@ -6,8 +6,11 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_OVERRIDES_PACKAGES := \
     Accord \
+    Chrome \
     Chrome-Stub \
+    ConnMO \
     Drive \
+    DCMO \
     FilesPrebuilt  \
     Gramophone \
     Maestro \
@@ -15,6 +18,9 @@ LOCAL_OVERRIDES_PACKAGES := \
     RecorderPrebuilt \
     SafetyHubPrebuilt \
     Symphonica \
+    Tycho \
+    VoiceAccessPrebuilt \
+    VZWAPNLib \
     YouTube
 
 LOCAL_UNINSTALLABLE_MODULE := true
