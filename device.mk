@@ -434,7 +434,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.xiaomi-libperfmgr \
+    android.hardware.power-service.lineage-libperfmgr \
     libqti-perfd-client
 
 PRODUCT_COPY_FILES += \
@@ -496,7 +496,9 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/xiaomi \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/qcom-caf/common/fwk-detect
+    hardware/lineage/interfaces/power-libperfmgr \
+    hardware/qcom-caf/common/fwk-detect \
+    hardware/qcom-caf/common/libqti-perfd-client
 
 # NeuralNetworks
 PRODUCT_PACKAGES += \
