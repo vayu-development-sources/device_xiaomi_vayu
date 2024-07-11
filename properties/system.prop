@@ -19,6 +19,9 @@ camera.disable_zsl_mode=true
 persist.vendor.camera.facepp.fdenable=0
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.derpfest.flash,org.derpfest.flash.dev
 
+# Disable MTE Async for system server
+persist.arm64.memtag.system_server=off
+
 # Charger
 ro.charger.disable_init_blank=true
 
