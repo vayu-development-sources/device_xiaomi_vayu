@@ -33,6 +33,13 @@ PRODUCT_TARGET_VNDK_VERSION := 30
 # Dynamic partitions setup
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Dolby
+$(call inherit-product-if-exists, vendor/dolby/dolby.mk)
+
+# Camera
+$(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
+
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
@@ -116,7 +123,6 @@ PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
-    GCamGOPrebuilt \
     libcamera2ndk_vendor \
     libdng_sdk.vendor \
     libgui_vendor \
@@ -129,7 +135,6 @@ PRODUCT_PACKAGES += \
     libutilscallstack.vendor
 
 PRODUCT_PACKAGES += \
-    libshim_megvii \
     libpiex_shim
 
 PRODUCT_COPY_FILES += \
@@ -172,7 +177,6 @@ endif
 
 # Display
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@2.4-impl \
     android.hardware.graphics.composer@2.4-service \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
@@ -181,7 +185,6 @@ PRODUCT_PACKAGES += \
     gralloc.msmnile \
     hwcomposer.msmnile \
     libdisplayconfig.qti \
-    libdisplayconfig.qti.vendor \
     libsdmcore \
     libsdmutils \
     libtinyxml \
@@ -334,7 +337,6 @@ PRODUCT_PACKAGES += \
     qti-telephony-hidl-wrapper \
     qti-telephony-hidl-wrapper-prd \
     qti_telephony_hidl_wrapper.xml \
-    qti_telephony_hidl_wrapper_prd.xml \
     qti-telephony-utils \
     qti-telephony-utils-prd \
     qti_telephony_utils.xml \
@@ -443,9 +445,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_c2_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_video.xml
 
-# MiuiCamera
--include vendor/xiaomi/miuicamera/config.mk
-
 # Network
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor
@@ -494,7 +493,6 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.secure_element@1.2.vendor \
     libjson \
-    libjson.vendor \
     libprotobuf-cpp-full \
     librmnetctl
 
