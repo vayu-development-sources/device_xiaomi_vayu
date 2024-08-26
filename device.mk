@@ -112,13 +112,6 @@ PRODUCT_COPY_FILES += \
 # Bluetooth Library Deps
 PRODUCT_PACKAGES += \
     libbluetooth_audio_session \
-    libbthost_if.vendor \
-    libldacBT_bco \
-    libldacBT_bco.vendor \
-    liblhdc \
-    liblhdcBT_enc \
-    liblhdcdec \
-    liblhdcBT_dec
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -225,7 +218,6 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4-service.clearkey \
     android.hardware.drm@1.3-service.widevine-vayu.rc \
     android.hardware.drm@1.3.vendor
 
@@ -581,7 +573,6 @@ SOONG_CONFIG_thermal_hal_feature += \
 SOONG_CONFIG_thermal_hal_feature_pid ?= apply_1_0
 
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0-service.pixel \
     thermal_symlinks
 
 PRODUCT_COPY_FILES += \
@@ -593,9 +584,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.touchfeature@1.0.vendor
 
-# Tracing
-PRODUCT_PACKAGES += \
-    android.hardware.atrace@1.0-service.pixel
 
 # USB
 PRODUCT_PACKAGES += \
