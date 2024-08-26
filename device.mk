@@ -130,6 +130,7 @@ PRODUCT_PACKAGES += \
     libutilscallstack.vendor
 
 PRODUCT_PACKAGES += \
+    libshim_megvii \
     libpiex_shim
 
 PRODUCT_COPY_FILES += \
