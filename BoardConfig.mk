@@ -46,9 +46,15 @@ TARGET_NO_BOOTLOADER := true
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
 
-#Camera
+# Camera
+TARGET_USES_QTI_CAMERA_DEVICE := true
+USE_DEVICE_SPECIFIC_CAMERA := true
 MALLOC_SVELTE := true
 MALLOC_SVELTE_FOR_LIBC32 := true
+
+# Camera override hidl
+TARGET_CAMERA_USES_NEWER_HIDL_OVERRIDE_FORMAT := true
+
 
 # Display
 TARGET_USES_DISPLAY_RENDER_INTENTS := true
@@ -100,9 +106,6 @@ endif
 
 # Lineage Health
 TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
-
-# MiuiCamera
--include vendor/xiaomi/miuicamera/BoardConfig.mk
 
 # Partitions
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
@@ -165,7 +168,7 @@ TARGET_USES_MKE2FS := true
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Sepolicy
-include device/derp/sepolicy/libperfmgr/sepolicy.mk
+include device/lineage/sepolicy/libperfmgr/sepolicy.mk
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
