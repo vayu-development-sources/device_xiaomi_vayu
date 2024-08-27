@@ -75,7 +75,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libaudioroute.vendor
 
+# Audio Configs
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/audio/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 PRODUCT_COPY_FILES += \
