@@ -33,6 +33,12 @@ PRODUCT_TARGET_VNDK_VERSION := 30
 # Dynamic partitions setup
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Dolby
+$(call inherit-product-if-exists, vendor/dolby/dolby.mk)
+
+# Camera
+$(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
+
 # Signing Rom with test keys
 include vendor/lineage-priv/keys/keys.mk
 
