@@ -564,10 +564,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine-game.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-game.conf \
     $(LOCAL_PATH)/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
 
-# Touchfeature
-PRODUCT_PACKAGES += \
-    vendor.xiaomi.hardware.touchfeature@1.0.vendor
-
 
 # USB
 PRODUCT_PACKAGES += \
