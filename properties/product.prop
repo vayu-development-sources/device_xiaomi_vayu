@@ -5,6 +5,10 @@ audio.sys.routing.latency=0
 audio.offload.min.duration.secs=30
 audio.sys.offload.pstimeout.secs=3
 
+# Camera
+persist.vendor.camera.privapp.list=org.lineageos.aperture,com.android.camera
+vendor.camera.aux.packagelist=org.lineageos.aperture,com.android.camera
+
 # Charger
 ro.charger.enable_suspend=true
 
