@@ -53,6 +53,7 @@ MALLOC_SVELTE_FOR_LIBC32 := true
 
 # Camera override hidl
 TARGET_CAMERA_USES_NEWER_HIDL_OVERRIDE_FORMAT := true
+TARGET_CAMERA_PACKAGE_NAME := com.xiaomi.sessionparams.clientName
 
 
 # Display
