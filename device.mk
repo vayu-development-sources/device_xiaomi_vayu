@@ -411,7 +411,10 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
+    libsfplugin_ccodec_utils.vendor \
     libstagefrighthw \
+    libvorbisidec.vendor \
+    libvpx.vendor \
     vendor.qti.media.c2@1.0-service-vayu.rc
 
 PRODUCT_COPY_FILES += \
