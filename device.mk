@@ -130,7 +130,6 @@ PRODUCT_PACKAGES += \
     libutilscallstack.vendor
 
 PRODUCT_PACKAGES += \
-    libshim_megvii \
     libpiex_shim
 
 PRODUCT_COPY_FILES += \
@@ -413,6 +412,8 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libsfplugin_ccodec_utils.vendor \
     libstagefrighthw \
+    libstagefright_amrnb_common.vendor \
+    libstagefright_enc_common.vendor \
     libvorbisidec.vendor \
     libvpx.vendor \
     vendor.qti.media.c2@1.0-service-vayu.rc
