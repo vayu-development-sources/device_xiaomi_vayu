@@ -113,6 +113,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libbluetooth_audio_session \
 
+# Blur
+TARGET_ENABLE_BLUR := true
+
 # Camera
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
@@ -132,14 +135,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libpiex_shim
 
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/camera/camera_cnf.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_cnf.txt
-
 PRODUCT_PACKAGES += \
     libMegviiFacepp-0.5.2 \
     libmegface
 
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/camera/camera_cnf.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_cnf.txt
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \

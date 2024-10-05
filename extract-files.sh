@@ -81,16 +81,11 @@ function blob_fixup() {
             sed -i 's/%d\/on/%d\/../g' "${2}"
             ;;
         vendor/lib64/hw/camera.qcom.so)
-            $PATCHELF_TOOL --remove-needed "libMegviiFacepp-0.5.2.so" "${2}"
-            $PATCHELF_TOOL --remove-needed "libmegface.so" "${2}"
-            $PATCHELF_TOOL --add-needed "libshim_megvii.so" "${2}"
+            sed -i "s/\x73\x74\x5F\x6C\x69\x63\x65\x6E\x73\x65\x2E\x6C\x69\x63/\x63\x61\x6D\x65\x72\x61\x5F\x63\x6E\x66\x2E\x74\x78\x74/g" "${2}"
             ;;
         vendor/lib64/camera/components/com.qti.node.watermark.so)
-            $PATCHELF_TOOL --add-needed "libpiex_shim.so" "${2}"
-            ;;
-    	vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy)
-	    echo 'madvise: 1' >> ${2}
-	    ;;
+            grep -q "libpiex_shim.so" "${2}" || "${PATCHELF}" --add-needed "libpiex_shim.so" "${2}"
+			;;
 	    vendor/lib/libstagefright_soft_ddpdec.so | vendor/lib/libstagefright_soft_ac4dec.so | \
         vendor/lib/libstagefrightdolby.so | vendor/lib64/libstagefright_soft_ddpdec.so | \
         vendor/lib64/libdlbdsservice.so | vendor/lib64/libstagefright_soft_ac4dec.so | vendor/lib64/libstagefrightdolby.so)
