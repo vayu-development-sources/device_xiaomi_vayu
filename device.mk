@@ -39,9 +39,6 @@ $(call inherit-product-if-exists, vendor/dolby/dolby.mk)
 # Camera
 $(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
 
-# Signing Rom with test keys
-include vendor/lineage-priv/keys/keys.mk
-
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
