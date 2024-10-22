@@ -133,15 +133,8 @@ PRODUCT_PACKAGES += \
     libutilscallstack.vendor
 
 PRODUCT_PACKAGES += \
+    libshim_megvii \
     libpiex_shim
-
-PRODUCT_PACKAGES += \
-    libMegviiFacepp-0.5.2 \
-    libmegface
-
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/camera/camera_cnf.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_cnf.txt
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
