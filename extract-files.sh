@@ -75,29 +75,54 @@ fi
 function blob_fixup() {
     case "${1}" in
         vendor/etc/qdcm_calib_data_xiaomi_36_02_0a_video_mode_dsc_dsi_panel.xml | vendor/etc/qdcm_calib_data_xiaomi_42_02_0b_video_mode_dsc_dsi_panel.xml)
+	    [ "$2" = "" ] && return 0
             sed -i "s/dcip3/srgb/" "${2}"
             ;;
         vendor/bin/mi_thermald)
+	    [ "$2" = "" ] && return 0
             sed -i 's/%d\/on/%d\/../g' "${2}"
             ;;
         vendor/lib64/hw/camera.qcom.so)
+	    [ "$2" = "" ] && return 0
             sed -i "s/\x73\x74\x5F\x6C\x69\x63\x65\x6E\x73\x65\x2E\x6C\x69\x63/\x63\x61\x6D\x65\x72\x61\x5F\x63\x6E\x66\x2E\x74\x78\x74/g" "${2}"
             ;;
         vendor/lib64/camera/components/com.qti.node.watermark.so)
+	    [ "$2" = "" ] && return 0
             grep -q "libpiex_shim.so" "${2}" || "${PATCHELF}" --add-needed "libpiex_shim.so" "${2}"
 			;;
 	    vendor/lib/libstagefright_soft_ddpdec.so | vendor/lib/libstagefright_soft_ac4dec.so | \
         vendor/lib/libstagefrightdolby.so | vendor/lib64/libstagefright_soft_ddpdec.so | \
         vendor/lib64/libdlbdsservice.so | vendor/lib64/libstagefright_soft_ac4dec.so | vendor/lib64/libstagefrightdolby.so)
+	    [ "$2" = "" ] && return 0
             $PATCHELF_TOOL --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
         ;;
-	vendor/lib/libwvhidl.so | vendor/lib/mediadrm/libwvdrmengine.so | vendor/lib64/libwvhidl.so | vendor/lib64/mediadrm/libwvdrmengine.so)
-            $PATCHELF_TOOL --replace-needed "libcrypto.so" "libcrypto-v34.so" "${2}"
+	vendor/lib64/libwvhidl.so | vendor/lib64/mediadrm/libwvdrmengine.so)
+            [ "$2" = "" ] && return 0
+            grep -q "libcrypto_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
             ;;
-	vendor/lib64/libwvhidl.so)
-            "${PATCHELF}" --replace-needed "libcrypto.so" "libcrypto-v33.so" "${2}"
+        vendor/etc/seccomp_policy/atfwd@2.0.policy|vendor/etc/seccomp_policy/wfdhdcphalservice.policy)
+            [ "$2" = "" ] && return 0
+            grep -q "gettid: 1" "${2}" || echo -e "\ngettid: 1" >> "${2}"
+            ;;
+        vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy)
+            [ "$2" = "" ] && return 0
+            grep -q "madvise: 1" "${2}" || echo -e "\nmadvise: 1" >> "${2}"
+            ;;
+        system_ext/lib/libwfdmmsrc_system.so)
+            [ "$2" = "" ] && return 0
+            grep -q "libgui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libgui_shim.so" "${2}"
+            ;;
+        system_ext/lib64/libwfdnative.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "android.hidl.base@1.0.so" "libhidlbase.so" "${2}"
+            grep -q "libinput_shim.so" "${2}" || "${PATCHELF}" --add-needed "libinput_shim.so" "${2}"
+            ;;
+	*)
+            return 1
             ;;
     esac
+
+    return 0
 }
 
 # Initialize the helper
