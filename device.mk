@@ -211,9 +211,6 @@ PRODUCT_COPY_FILES += \
 
 TARGET_EXCLUDES_AUDIOFX := true
 
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v33/arm/arch-arm-armv7-a-neon/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_foundation-v33.so \
-    prebuilts/vndk/v33/arm64/arch-arm64-armv8-a/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_foundation-v33.so
 
 PRODUCT_PACKAGES += \
     libstagefright_softomx.vendor \
@@ -421,6 +418,8 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libsfplugin_ccodec_utils.vendor \
     libstagefrighthw \
+    libstagefright_omx \
+    libstagefright_foundation \
     libstagefright_amrnb_common.vendor \
     libstagefright_enc_common.vendor \
     libvorbisidec.vendor \
