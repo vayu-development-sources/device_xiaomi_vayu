@@ -128,9 +128,6 @@ $(foreach p, $(BOARD_PARTITION_LIST), $(eval TARGET_COPY_OUT_$(p) := $(call to-l
 
 BOARD_USES_METADATA_PARTITION := true
 
-# Partitions - reserved size
--include vendor/lineage/config/BoardConfigReservedSize.mk
-
 # Power
 TARGET_USES_INTERACTION_BOOST := true
 
