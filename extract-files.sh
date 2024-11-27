@@ -95,31 +95,8 @@ function blob_fixup() {
         vendor/lib64/libdlbdsservice.so | vendor/lib64/libstagefright_soft_ac4dec.so | vendor/lib64/libstagefrightdolby.so)
 	    [ "$2" = "" ] && return 0
             $PATCHELF_TOOL --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
-        ;;
-	vendor/lib64/libwvhidl.so | vendor/lib64/mediadrm/libwvdrmengine.so)
-            [ "$2" = "" ] && return 0
-            grep -q "libcrypto_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
             ;;
-        vendor/etc/seccomp_policy/atfwd@2.0.policy|vendor/etc/seccomp_policy/wfdhdcphalservice.policy)
-            [ "$2" = "" ] && return 0
-            grep -q "gettid: 1" "${2}" || echo -e "\ngettid: 1" >> "${2}"
-            ;;
-        vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy)
-            [ "$2" = "" ] && return 0
-            grep -q "madvise: 1" "${2}" || echo -e "\nmadvise: 1" >> "${2}"
-            ;;
-        system_ext/lib/libwfdmmsrc_system.so)
-            [ "$2" = "" ] && return 0
-            grep -q "libgui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libgui_shim.so" "${2}"
-            ;;
-        system_ext/lib64/libwfdnative.so)
-            [ "$2" = "" ] && return 0
-            "${PATCHELF}" --replace-needed "android.hidl.base@1.0.so" "libhidlbase.so" "${2}"
-            grep -q "libinput_shim.so" "${2}" || "${PATCHELF}" --add-needed "libinput_shim.so" "${2}"
-            ;;
-	*)
-            return 1
-            ;;
+
     esac
 
     return 0
