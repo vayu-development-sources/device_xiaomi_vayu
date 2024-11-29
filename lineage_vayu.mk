@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2023 The ArrowOS Project
+# Copyright (C) 2021-2022 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -8,32 +8,26 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit device configurations
+# Inherit from vayu device
 $(call inherit-product, device/xiaomi/vayu/device.mk)
 
-# Inherit some common RisingOS stuff.
+# Inherit from common lineage configuration
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+EVO_BUILD_TYPE := Unofficial
+TARGET_DISABLE_EPPE := true
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_BUILD_APERTURE_CAMERA := false
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 2340
+TARGET_SCREEN_WIDTH := 1080
+
+# Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_vayu
 PRODUCT_DEVICE := vayu
+PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_BRAND := POCO
-PRODUCT_MODEL := POCO X3 Pro
-PRODUCT_SYSTEM_NAME := vayu_global
-PRODUCT_SYSTEM_DEVICE := vayu
-
-# Ship GApps
-
-WITH_GMS := true
-
-# RisingOS flags
-PRODUCT_NO_CAMERA := true
-TARGET_DEFAULT_PIXEL_LAUNCHER := false
-TARGET_ENABLE_PIXEL_FEATURES := true
-RISING_MAINTAINER := momenabdulrazekali
-RISING_BUILDTYPE := UNOFFICIAL
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    RisingMaintainer="momenabdulrazekali"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
