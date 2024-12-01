@@ -99,3 +99,10 @@ debug.sf.latch_unsignaled=1
 media.wfd.max_resolution=8
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
+
+# Device Information for Project Infinity X
+ro.infinity.soc=Snapdragon 860
+ro.infinity.battery=5160 mAh
+ro.infinity.display=2400 x 1080, 120 Hz
+ro.infinity.camera=48MP + 8MP + 2MP + 2MP
+ro.product.marketname=POCO X3 PRO
