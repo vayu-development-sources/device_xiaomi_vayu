@@ -15,7 +15,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Sakura flags
 SAKURA_OFFICIAL := true
-SAKURA_MAINTAINER := ArmSM
+SAKURA_MAINTAINER := ArmSM&Momenabdulrazekali
 TARGET_BOOT_ANIMATION_RES := 1080
 SAKURA_BUILD_TYPE := gapps
 
