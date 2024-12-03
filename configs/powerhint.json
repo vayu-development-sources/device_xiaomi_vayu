@@ -37,7 +37,8 @@
         "1804800",
         "1708800",
         "1612800",
-        "1401600"
+        "1401600",
+        "1286400"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -49,10 +50,11 @@
         "9999999",
         "1612800",
         "1401600",
+        "1286400",
         "1171200",
         "0"
       ],
-      "DefaultIndex": 4,
+      "DefaultIndex": 5,
       "ResetOnInit": true
     },
     {
@@ -67,7 +69,8 @@
         "2016000",
         "1804800",
         "1612800",
-        "1401600"
+        "1401600",
+        "1286400"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -379,25 +382,19 @@
       "PowerHint": "INTERACTION",
       "Node": "CPUBigClusterMinFreq",
       "Duration": 0,
-      "Value": "1612800"
+      "Value": "1286400"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "CPUBigPlusClusterMinFreq",
       "Duration": 0,
-      "Value": "1612800"
+      "Value": "1286400"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "CPULittleClusterMinFreq",
       "Duration": 0,
-      "Value": "1555200"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "GPUMinFreq",
-      "Duration": 0,
-      "Value": "585000000"
+      "Value": "1382400"
     },
     {
       "PowerHint": "INTERACTION",
