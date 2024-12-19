@@ -15,32 +15,25 @@
      limitations under the License.
 -->
 <resources>
-    <!-- App Name -->
-    <string name="deviceparts_label" translatable="false">Device Parts</string>
-
-    <string name="enabled">Enabled</string>
-    <string name="disabled">Disabled</string>
 
     <string name="on">On</string>
     <string name="off">Off</string>
 
     <!-- Ambient settings -->
     <string name="ambient_enable">Use ambient display</string>
-    <string name="ambient_display_ia_summary">Raise to wake, pocket gesture, etc</string>
-    <string name="pick_up_title">Pickup mode</string>
-    <string name="pick_up_gyro_title">Use gyroscope for pickup mode</string>
-    <string name="pick_up_gyro_summary">Better accuracy, increases power usage</string>
+    <string name="doze_summary">Advanced Ambient Display Preferences</string>
 
-    <!-- Touch control Settings -->
-    <string name="touch_control_title">Touch control</string>
-    <string name="touch_control_summary">Adjust per-app touchscreen features</string>
-    <string name="touch_game_mode_title">Enable</string>
-    <string name="touch_response_title">Responsivity</string>
-    <string name="touch_response_summary">Controls touch response</string>
-    <string name="touch_sensitivity_title">Sensitivity</string>
-    <string name="touch_sensitivity_summary">Controls touch sensitivity for repeated taps</string>
-    <string name="touch_resistant_title">Resistant area</string>
-    <string name="touch_resistant_summary">Reduce touch sensitivity near the edges to avoid triggering touch controls</string>
+
+    <!-- Thermal Profiles -->
+    <string name="thermal_title">Thermal Profiles</string>
+    <string name="thermal_summary">Adjust per-app thermal profiles for optimum performance</string>
+    <string name="thermal_default">Default</string>
+    <string name="thermal_benchmark">Benchmark</string>
+    <string name="thermal_browser">Browser</string>
+    <string name="thermal_camera">Camera</string>
+    <string name="thermal_dialer">Dialer</string>
+    <string name="thermal_gaming">Gaming</string>
+    <string name="thermal_streaming">Streaming</string>
 
     <!-- Dirac settings -->
     <string name="dirac_enable">Enable dirac</string>
@@ -88,6 +81,7 @@
     <string name="dirac_preset_dance">Dance</string>
     <string name="dirac_preset_metal">Metal</string>
     <string name="dirac_preset_bass_booster">Bass Booster</string>
+
     <!-- Dirac : QS tile title -->
     <string name="dirac_qs_tile_title">Dirac sound</string>
 
@@ -95,7 +89,7 @@
     <string name="clear_speaker_title">Clear speaker</string>
     <string name="clear_speaker_summary">Play a 30-second audio to clear the speaker</string>
     <string name="clear_speaker_description">Run this feature once or twice if you find that your speaker is lightly blocked by dust. Set media volume to maximum.\n\nIf the speaker is blocked heavily, run this feature 2-5 times while shaking your device with the speaker facing downwards.\n\nWARNING: Ensure that any headphones are unplugged.</string>
-
+   
      <!-- Raise to wake strings-->
     <string name="raise_to_wake_gesture_title">Raise to wake</string>
     <string name="raise_to_wake_gesture_summary">Wake up the device instead of pulsing notification</string>
@@ -103,8 +97,6 @@
 
      <!-- Haptic Level Settings -->
      <string name="haptic_title">Haptic feedback</string>
-     <string name="haptic_warning">Setting-up haptic level too high may cause permanent hardware damage, use at your own risk</string>
-     <string name="haptic_summary">Customize vibration intensity</string>
      <string name="haptic_level_title">Level</string>
      <string name="haptic_level_summary">The amount of vibration intensity</string>
      <string name="haptic_level_summary_incompatible">Kernel did not support this feature</string>
@@ -112,15 +104,16 @@
     <!-- Refresh Rate tile -->
     <string name="refresh_rate_tile_title">Refresh Rate</string>
 
-    <!-- LCD Features -->
-    <string name="lcd_features_title">Additional Display Features</string>
-    <string name="lcd_features_summary">High Brightness Mode, CABC</string>
-    <string name="lcd_hbm_title">High Brightness Mode</string>
-    <string name="lcd_hbm_summary">Improve visibility under bright environment</string>
-    <string name="lcd_cabc_title">Content Adaptive Backlight Control</string>
-    <string name="lcd_hbm_tile_title">HBM</string>
-    <string name="lcd_cabc_tile_title">CABC</string>
-    <string name="lcd_features_info">High Brightness Mode (HBM) increases the maximum brightness of the display to improve visibility under sunlight. Increases power consumption.\n\nContent Adaptive Backlight Control (CABC) adjusts display and backlight brightness based on currently shown content, to reduce power consumption without degradation.</string>
-    <string name="kernel_not_supported">Kernel did not support this feature</string>
+    <!-- Xiaomi Parts Label -->
+    <string name="xiaomiparts_label">Xiaomi Parts</string>
 
+    <!-- Per app maximum refresh rate -->
+    <string name="refresh_title">Refresh Rate Profiles</string>
+    <string name="refresh_summary">Set a specific refresh rate for each applications</string>
+    <string name="refresh_default">Default</string>
+    <string name="refresh_low">30Hz</string>
+    <string name="refresh_moderate">50Hz</string>
+    <string name="refresh_medium">60Hz</string>
+    <string name="refresh_high">90Hz</string>
+    <string name="refresh_extreme">120Hz</string>
 </resources>

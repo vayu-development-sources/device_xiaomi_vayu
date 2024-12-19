@@ -36,9 +36,6 @@ PRODUCT_TARGET_VNDK_VERSION := 30
 # Dynamic partitions setup
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-# Camera
-$(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
-
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
@@ -109,7 +106,7 @@ PRODUCT_COPY_FILES += \
 # Bluetooth Library Deps
 PRODUCT_PACKAGES += \
     libbluetooth_audio_session \
-
+    
 # Blur
 TARGET_ENABLE_BLUR := true
 
@@ -166,7 +163,7 @@ PRODUCT_COPY_FILES += \
 
 # Device Parts
 PRODUCT_PACKAGES += \
-    DeviceParts
+    XiaomiParts
 
 # Dex
 ifneq ($(TARGET_BUILD_VARIANT),eng)
@@ -196,7 +193,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@1.1.vendor \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
-    vendor.qti.hardware.display.mapper@4.0.vendor
+    vendor.qti.hardware.display.mapper@4.0.vendor \
+    vendor.qti.hardware.memtrack-service
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml \
@@ -218,8 +216,9 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.3-service.widevine-vayu.rc \
-    android.hardware.drm@1.3.vendor
+    PRODUCT_PACKAGES += \
+    android.hardware.drm-service.clearkey \
+    android.hardware.drm@1.4.vendor
 
 # Fastbootd
 PRODUCT_PACKAGES += \
@@ -287,7 +286,6 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
-    libhidltransport \
     libhwbinder.vendor
 
 # Hotword Enrollment
@@ -330,9 +328,13 @@ PRODUCT_PACKAGES += \
     ims-ext-common \
     ims_ext_common.xml \
     qti-telephony-hidl-wrapper \
+    qti-telephony-hidl-wrapper-prd \
     qti_telephony_hidl_wrapper.xml \
+    qti_telephony_hidl_wrapper_prd.xml \
     qti-telephony-utils \
+    qti-telephony-utils-prd \
     qti_telephony_utils.xml \
+    qti_telephony_utils_prd.xml \
     telephony-ext
 
 PRODUCT_BOOT_JARS += \
@@ -414,12 +416,7 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
-    libsfplugin_ccodec_utils.vendor \
     libstagefrighthw \
-    libstagefright_amrnb_common.vendor \
-    libstagefright_enc_common.vendor \
-    libvorbisidec.vendor \
-    libvpx.vendor \
     vendor.qti.media.c2@1.0-service-vayu.rc
 
 PRODUCT_COPY_FILES += \
@@ -450,13 +447,17 @@ PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3-service-qti-vayu.rc
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
-
-PRODUCT_ENFORCE_RRO_TARGETS := *
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += $(LOCAL_PATH)/overlay/packages/apps/CarrierConfig
-
+PRODUCT_PACKAGES += \
+   CarrierConfigOverlayVayu \
+   DialerOverlayVayu \
+   FrameworksResOverlayVayu \
+   NotchBarKillerVayu \
+   SettingsOverlayVayu \
+   SettingsProviderOverlayVayu \
+   SystemUIOverlayVayu \
+   TelephonyOverlayVayu \
+   TetheringConfigOverlayVayu \
+   WifiOverlayVayu
 
 # Power
 PRODUCT_PACKAGES += \

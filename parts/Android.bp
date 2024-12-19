@@ -5,13 +5,12 @@
 //
 
 android_app {
-    name: "DeviceParts",
+    name: "XiaomiParts",
     defaults: [
         "SettingsLibDefaults",
     ],
 
     srcs: ["src/**/*.java"],
-    init_rc: ["deviceparts.rc"],
     resource_dirs: ["res"],
     certificate: "platform",
     platform_apis: true,
@@ -23,7 +22,6 @@ android_app {
         "androidx.preference_preference",
         "org.lineageos.settings.resources",
         "SettingsLib",
-        "//hardware/xiaomi:vendor.xiaomi.hardware.touchfeature-V1.0-java",
     ],
 
     optimize: {

@@ -26,12 +26,13 @@ import android.util.Log;
 import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.doze.DozeUtils;
 import org.lineageos.settings.haptic.HapticUtils;
-import org.lineageos.settings.touchscreen.TouchFeatureUtils;
+import org.lineageos.settings.thermal.ThermalUtils;
+import org.lineageos.settings.refreshrate.RefreshUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
     private static final boolean DEBUG = false;
-    private static final String TAG = "DeviceParts";
+    private static final String TAG = "XiaomiParts";
 
     @Override
     public void onReceive(final Context context, Intent intent) {
@@ -42,7 +43,8 @@ public class BootCompletedReceiver extends BroadcastReceiver {
             Log.d(TAG, "Dirac is not present in system");
         }
         DozeUtils.checkDozeService(context);
-        TouchFeatureUtils.startService(context);
+        ThermalUtils.startService(context);
         HapticUtils.restoreLevel(context);
+        RefreshUtils.startService(context);
     }
 }

@@ -15,34 +15,26 @@
      limitations under the License.
 -->
 <resources>
-    <!-- App Name -->
-
-    <string name="enabled">Включить</string>
-    <string name="disabled">Выключить</string>
 
     <string name="on">Вкл</string>
     <string name="off">Выкл</string>
 
-     <!-- Ambient settings -->
+    <!-- Ambient settings -->
     <string name="ambient_enable">Использовать индикацию событий</string>
-    <string name="ambient_display_ia_summary">Поднимите, чтобы разбудить, карманный жест и другое</string>
-    <string name="pick_up_title">Режим поднятия</string>
-    <string name="pick_up_gyro_title">Использовать гироскоп для режима поднятия</string>
-    <string name="pick_up_gyro_summary">Улучшенная точность, увеличивает энергопотребление</string>
-
-     <!-- Touch control Settings -->
-    <string name="touch_control_title">Настройка сенсора</string>
-    <string name="touch_control_summary">Настройка функций сенсорного экрана для каждого приложения</string>
-    <string name="touch_game_mode_title">Включить</string>
-    <string name="touch_response_title">Отзывчивость</string>
-    <string name="touch_response_summary">Управляет откликом</string>
-    <string name="touch_sensitivity_title">Чувствительность</string>
-    <string name="touch_sensitivity_summary">Контролирует чувствительность для повторных касаний</string>
-    <string name="touch_resistant_title">Безопасная зона</string>
-    <string name="touch_resistant_summary">Снижает чувствительность по краям для предотвращения случайных нажатий</string>
+     
+    <!-- Thermal Profiles -->
+    <string name="thermal_title">Профили оптимизации</string>
+    <string name="thermal_summary">Установите профили оптимизации для оптимальной производительности приложений</string>
+    <string name="thermal_default">По умолчанию</string>
+    <string name="thermal_benchmark">Бенчмарк</string>
+    <string name="thermal_browser">Браузер</string>
+    <string name="thermal_camera">Камера</string>
+    <string name="thermal_dialer">Звонки</string>
+    <string name="thermal_gaming">Игры</string>
+    <string name="thermal_streaming">Стриминг</string>
 
     <!-- Dirac settings -->
-    <string name="dirac_enable">Включить Dirac</string>
+    <string name="dirac_enable">Включить dirac</string>
     <string name="dirac_title">Улучшение звука Dirac</string>
     <string name="dirac_summary">Оптимизация качества звука с помощью Dirac, Hi-Fi</string>
     <string name="dirac_headset_title">Тип гарнитуры</string>
@@ -86,9 +78,10 @@
     <string name="dirac_preset_country">Кантри</string>
     <string name="dirac_preset_dance">Танцевальная</string>
     <string name="dirac_preset_metal">Металл</string>
-    <string name="dirac_preset_bass_booster">Усиленный басс</string>
+    <string name="dirac_preset_bass_booster">Усиление баса</string>
+
     <!-- Dirac : QS tile title -->
-    <string name="dirac_qs_tile_title">Dirac звук</string>
+    <string name="dirac_qs_tile_title">Улучшение звука Dirac</string>
 
     <!-- Clear Speaker -->
     <string name="clear_speaker_title">Очистка динамика</string>
@@ -98,27 +91,23 @@
     <!-- Raise to wake strings-->
     <string name="raise_to_wake_gesture_title">Поднимите, чтобы разбудить</string>
     <string name="raise_to_wake_gesture_summary">Разбудить устройство вместо пульсирующего уведомления</string>
-
-    <!-- Haptic Level Settings -->
+     
+     <!-- Haptic Level Settings -->
      <string name="haptic_title">Тактильный отклик</string>
-     <string name="haptic_warning">Установка слишком высокого уровня тактильного отклика может привести к необратимому повреждению оборудования, используйте на свой страх и риск</string>
-     <string name="haptic_summary">Настройка интенсивности тактильного отлика</string>
-     <string name="haptic_level_title">Уровень</string>
-     <string name="haptic_level_summary">Значение интенсивности тактильного отклика</string>
-     <string name="haptic_level_summary_incompatible">Ядро не поддерживает эту функцию</string>
+     <string name="haptic_level_title">Сила отклика</string>
+     <string name="haptic_level_summary">Сила интенсивности тактильного отклика</string>
+     <string name="haptic_level_summary_incompatible">Функция не поддерживается ядром</string>
 
-    <!-- Refresh Rate tile -->
-    <string name="refresh_rate_tile_title">Частота обновления</string>
+     <!-- Refresh Rate tile -->
+    <string name="refresh_rate_tile_title">Частота обновления экрана</string>
 
-    <!-- LCD Features -->
-    <string name="lcd_features_title">Дополнительные функции экрана</string>
-    <string name="lcd_features_summary">Режим повышенной яркости (HBM), Адаптивное управление подсветкой (CABC)</string>
-    <string name="lcd_hbm_title">Режим повышенной яркости (HBM)</string>
-    <string name="lcd_hbm_summary">Увеличение яркости экрана при солнечном свете</string>
-    <string name="lcd_cabc_title">Режим адаптивного управления подсветкой (CABS)</string>
-    <string name="lcd_hbm_tile_title">HBM</string>
-    <string name="lcd_cabc_tile_title">CABC</string>
-    <string name="lcd_features_info">Режим высокой яркости (HBM) увеличивает максимальную яркость дисплея для улучшения видимости при солнечном свете. Увеличивает энергопотребление.\n\nCABC (Адаптивное управление подсветкой) регулирует яркость дисплея и подсветки в зависимости от текущего отображаемого контента, чтобы снизить энергопотребление без ухудшения качества.</string>
-    <string name="kernel_not_supported">Ядро не поддерживает эту функцию</string>
-
+     <!-- Per app maximum refresh rate -->
+    <string name="refresh_title">Настройка частоты обновления экрана</string>
+    <string name="refresh_summary">Настройка максимальной частоты обновления для каждого приложения</string>
+    <string name="refresh_default">По умолчанию</string>
+    <string name="refresh_low">30Гц</string>
+    <string name="refresh_moderate">50Гц</string>
+    <string name="refresh_medium">60Гц</string>
+    <string name="refresh_high">90Гц</string>
+    <string name="refresh_extreme">120Гц</string>
 </resources>
