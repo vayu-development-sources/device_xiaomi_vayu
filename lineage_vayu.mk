@@ -26,6 +26,10 @@ PRODUCT_SYSTEM_DEVICE := vayu
 
 WITH_GMS := true
 
+# Ship Pixel Launcher as Default
+
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
+
 # RisingOS flags
 PRODUCT_NO_CAMERA := true
 TARGET_DEFAULT_PIXEL_LAUNCHER := false
