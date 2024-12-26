@@ -15,7 +15,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Sakura flags
 SAKURA_OFFICIAL := true
-SAKURA_MAINTAINER := ArmSM&Momenabdulrazekali
+SAKURA_MAINTAINER := ArmSM║║momenabdulrazekali
 TARGET_BOOT_ANIMATION_RES := 1080
 SAKURA_BUILD_TYPE := gapps
 
@@ -28,6 +28,12 @@ PRODUCT_NAME := lineage_vayu
 
 PRODUCT_SYSTEM_NAME := vayu_global
 PRODUCT_SYSTEM_DEVICE := vayu
+
+# Ship Google Apps
+
+BUILD_GOOGLE_CONTACTS := true
+BUILD_GOOGLE_DIALER := true
+BUILD_GOOGLE_MESSAGES := true
 
 # GMS
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
