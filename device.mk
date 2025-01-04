@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018-2021 ArrowOS
+# Copyright (C) 2018-2025 ProjectSakura
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -175,7 +175,7 @@ PRODUCT_PACKAGES += \
 
 # Dolby
 PRODUCT_PACKAGES += \
-    XiaomiDolby 
+    XiaomiDolby
 
 # Dex
 ifneq ($(TARGET_BUILD_VARIANT),eng)
@@ -410,18 +410,6 @@ PRODUCT_PACKAGES += \
     libavservices_minijail_vendor \
     libcodec2_hidl@1.0.vendor \
     libcodec2_vndk.vendor \
-    libmm-omxcore \
-    libOmxAacEnc \
-    libOmxAmrEnc \
-    libOmxCore \
-    libOmxEvrcEnc \
-    libOmxG711Enc \
-    libOmxQcelp13Enc \
-    libOmxVdec \
-    libOmxVenc \
-    libsfplugin_ccodec_utils.vendor \
-    libstagefrighthw \
-    libstagefright_omx \
     libstagefright_foundation \
     libstagefright_amrnb_common.vendor \
     libstagefright_enc_common.vendor \
