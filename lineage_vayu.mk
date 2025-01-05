@@ -11,33 +11,28 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit device configurations
 $(call inherit-product, device/xiaomi/vayu/device.mk)
 
-# Inherit some common RisingOS stuff.
+# Inherit some common Sakura stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_vayu
-PRODUCT_DEVICE := vayu
-PRODUCT_MANUFACTURER := Xiaomi
+# Sakura flags
+SAKURA_OFFICIAL := true
+SAKURA_MAINTAINER := ArmSM║║momenabdulrazekali
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# Device identifier
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := POCO X3 Pro
+PRODUCT_DEVICE := vayu
+PRODUCT_MANUFACTURER := Xiaomi
+PRODUCT_NAME := lineage_vayu
+
 PRODUCT_SYSTEM_NAME := vayu_global
 PRODUCT_SYSTEM_DEVICE := vayu
 
-# Ship GApps
+# Ship GAPPS
 
+SAKURA_BUILD_TYPE := gapps
 WITH_GMS := true
-
-# Ship Pixel Launcher as Default
-
-TARGET_DEFAULT_PIXEL_LAUNCHER := true
-
-# RisingOS flags
-PRODUCT_NO_CAMERA := true
-TARGET_DEFAULT_PIXEL_LAUNCHER := false
-TARGET_ENABLE_PIXEL_FEATURES := true
-RISING_MAINTAINER := momenabdulrazekali
-RISING_BUILDTYPE := UNOFFICIAL
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    RisingMaintainer="momenabdulrazekali"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
