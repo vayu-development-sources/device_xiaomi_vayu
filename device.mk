@@ -539,6 +539,9 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom-caf/common/fwk-detect \
     hardware/qcom-caf/common/libqti-perfd-client
 
+# Signing Rom with release keys
+$(call inherit-product-if-exists,vendor/lineage-priv/keys/keys.mk)
+
 # NeuralNetworks
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
