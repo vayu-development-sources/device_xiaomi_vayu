@@ -173,6 +173,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     DeviceParts
 
+# Dolby
+PRODUCT_PACKAGES += \
+    XiaomiDolby 
+
 # Dex
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
