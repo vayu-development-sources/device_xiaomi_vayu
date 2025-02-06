@@ -66,6 +66,9 @@ ro.nfc.port=I2C
 persist.vendor.data.iwlan.enable=true
 persist.vendor.data.mode=concurrent
 
+# Notch For MIUI Apps Support
+ro.miui.notch=1
+
 # NTP Server backup
 persist.backup.ntpServer="0.pool.ntp.org"
 
